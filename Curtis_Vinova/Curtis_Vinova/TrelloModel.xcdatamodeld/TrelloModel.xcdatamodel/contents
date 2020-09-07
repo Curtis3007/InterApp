@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19G73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Board" representedClassName="Board" syncable="YES" codeGenerationType="class">
+        <attribute name="boardID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="colorBoard" optional="YES" attributeType="String"/>
+        <attribute name="decription" optional="YES" attributeType="String"/>
+        <attribute name="imageBoard" optional="YES" attributeType="String"/>
+        <attribute name="nameBoard" optional="YES" attributeType="String"/>
+        <attribute name="numOfGroup" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="boardHave" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Group" inverseName="ofBoard" inverseEntity="Group"/>
+    </entity>
+    <entity name="Group" representedClassName="Group" syncable="YES" codeGenerationType="class">
+        <attribute name="groupID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="nameGroup" optional="YES" attributeType="String"/>
+        <attribute name="numOfTask" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="haveTask" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Task" inverseName="ofGroup" inverseEntity="Task"/>
+        <relationship name="ofBoard" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Board" inverseName="boardHave" inverseEntity="Board"/>
+    </entity>
+    <entity name="Task" representedClassName="Task" syncable="YES" codeGenerationType="class">
+        <attribute name="colorTask" optional="YES" attributeType="String"/>
+        <attribute name="contentTask" optional="YES" attributeType="String"/>
+        <attribute name="decription" optional="YES" attributeType="String"/>
+        <attribute name="nameTask" optional="YES" attributeType="String"/>
+        <attribute name="taskID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="timeOut" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="ofGroup" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Group" inverseName="haveTask" inverseEntity="Group"/>
+    </entity>
+    <elements>
+        <element name="Board" positionX="-106.08203125" positionY="-62.16015625" width="165.0859375" height="148"/>
+        <element name="Group" positionX="97.61328125" positionY="213.80078125" width="128" height="118"/>
+        <element name="Task" positionX="393.55078125" positionY="-91.86328125" width="128" height="148"/>
+    </elements>
+</model>

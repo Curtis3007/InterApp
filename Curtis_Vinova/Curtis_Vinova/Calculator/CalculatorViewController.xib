@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalculatorViewController" customModule="Curtis_Vinova" customModuleProvider="target">
+            <connections>
+                <outlet property="btnAC" destination="MNk-BV-xZj" id="ysS-Mx-e2F"/>
+                <outlet property="btnDivise" destination="ZBa-NX-wbl" id="i1B-SU-Gdc"/>
+                <outlet property="btnDivise100" destination="hMF-Ay-kx0" id="2ch-Fp-Qcr"/>
+                <outlet property="btnDot" destination="acD-YO-fn6" id="POX-7B-8cR"/>
+                <outlet property="btnEight" destination="JGA-qd-zEX" id="uvg-EG-yZt"/>
+                <outlet property="btnEqual" destination="Pfe-DJ-17L" id="oCj-bL-go4"/>
+                <outlet property="btnFive" destination="5ZR-nc-f5T" id="cMF-aS-KDL"/>
+                <outlet property="btnFour" destination="22f-0m-u86" id="6KX-DV-XPH"/>
+                <outlet property="btnMinus" destination="qxN-5a-lTR" id="GBh-Y6-63O"/>
+                <outlet property="btnMul" destination="Kly-Q7-S2A" id="CRT-tz-gt4"/>
+                <outlet property="btnNine" destination="8Va-P5-T6V" id="Xje-TR-y6B"/>
+                <outlet property="btnOne" destination="tZu-1j-Mbc" id="NFM-XO-esZ"/>
+                <outlet property="btnOpposite" destination="jwd-pl-Ucd" id="4lo-aL-moi"/>
+                <outlet property="btnPlus" destination="IGZ-hA-KtL" id="0s6-JV-UBA"/>
+                <outlet property="btnSeven" destination="092-gO-MdE" id="TwO-3y-flR"/>
+                <outlet property="btnSix" destination="CVY-VW-6s4" id="Wz3-Pu-P98"/>
+                <outlet property="btnThree" destination="wZY-8F-TK9" id="el3-W1-CPo"/>
+                <outlet property="btnTwo" destination="To3-RP-kly" id="CE2-Zb-3CO"/>
+                <outlet property="btnZero" destination="Fve-O8-Bwz" id="v0U-Km-Zkc"/>
+                <outlet property="label" destination="JD5-fw-YaF" id="Z4M-Xt-a32"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewEqual" destination="Pfe-DJ-17L" id="aII-bt-PLk"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eLM-Rk-vut">
+                    <rect key="frame" x="10" y="404" width="394" height="448"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQy-0X-D62">
+                            <rect key="frame" x="0.0" y="358.5" width="197" height="89.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fve-O8-Bwz">
+                                    <rect key="frame" x="5" y="1" width="187" height="87.5"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                    <state key="normal" title="0">
+                                        <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnEqual:" destination="-1" eventType="touchUpInside" id="G7P-pj-fAI"/>
+                                        <action selector="btnZero:" destination="-1" eventType="touchUpInside" id="oIU-0F-Q8f"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="Fve-O8-Bwz" secondAttribute="trailing" constant="5" id="3mb-Zo-yJQ"/>
+                                <constraint firstItem="Fve-O8-Bwz" firstAttribute="leading" secondItem="hQy-0X-D62" secondAttribute="leading" constant="5" id="k0O-bF-Uzp"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zPp-Kf-rPl">
+                            <rect key="frame" x="197" y="358.5" width="98.5" height="89.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acD-YO-fn6">
+                                    <rect key="frame" x="5.5" y="1" width="87.5" height="87.5"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="acD-YO-fn6" secondAttribute="height" multiplier="1:1" id="niR-D2-hhT"/>
+                                    </constraints>
+                                    <state key="normal" title=".">
+                                        <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnDot:" destination="-1" eventType="touchUpInside" id="xHe-Vo-rKH"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <constraints>
+                                <constraint firstItem="acD-YO-fn6" firstAttribute="centerY" secondItem="zPp-Kf-rPl" secondAttribute="centerY" id="4Xn-jL-ubj"/>
+                                <constraint firstItem="acD-YO-fn6" firstAttribute="top" secondItem="zPp-Kf-rPl" secondAttribute="top" constant="1" id="Knz-eJ-FEn"/>
+                                <constraint firstItem="acD-YO-fn6" firstAttribute="centerX" secondItem="zPp-Kf-rPl" secondAttribute="centerX" id="LAR-qy-J28"/>
+                                <constraint firstAttribute="bottom" secondItem="acD-YO-fn6" secondAttribute="bottom" constant="1" id="jH1-Bf-szf"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eOm-8U-oo7">
+                            <rect key="frame" x="295.5" y="358.5" width="98.5" height="89.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pfe-DJ-17L">
+                                    <rect key="frame" x="5.5" y="1" width="87.5" height="87.5"/>
+                                    <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="=">
+                                        <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnEqual:" destination="-1" eventType="touchUpInside" id="D7y-sr-Of3"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <constraints>
+                                <constraint firstItem="Pfe-DJ-17L" firstAttribute="centerY" secondItem="eOm-8U-oo7" secondAttribute="centerY" id="D3a-BL-SW8"/>
+                                <constraint firstItem="Pfe-DJ-17L" firstAttribute="centerX" secondItem="eOm-8U-oo7" secondAttribute="centerX" id="Fi2-wv-NGy"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B2P-bH-xmJ">
+                            <rect key="frame" x="0.0" y="269" width="98.5" height="89.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZu-1j-Mbc">
+                                    <rect key="frame" x="5.5" y="1" width="87.5" height="87.5"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="tZu-1j-Mbc" secondAttribute="height" multiplier="1:1" id="LkU-iX-W3Y"/>
+                                    </constraints>
+                                    <state key="normal" title="1">
+                                        <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnOne:" destination="-1" eventType="touchUpInside" id="tRc-BA-URr"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <constraints>
+                                <constraint firstItem="tZu-1j-Mbc" firstAttribute="centerX" secondItem="B2P-bH-xmJ" secondAttribute="centerX" id="Jav-mV-HgG"/>
+                                <constraint firstItem="tZu-1j-Mbc" firstAttribute="top" secondItem="B2P-bH-xmJ" secondAttribute="top" constant="1" id="Rjw-et-RoK"/>
+                                <constraint firstItem="tZu-1j-Mbc" firstAttribute="centerY" secondItem="B2P-bH-xmJ" secondAttribute="centerY" id="b56-sd-fbs"/>
+                                <constraint firstAttribute="bottom" secondItem="tZu-1j-Mbc" secondAttribute="bottom" constant="1" id="kor-W7-RCe"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbe-HD-MPn">
+                            <rect key="frame" x="98.5" y="269" width="98.5" height="89.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="To3-RP-kly">
+                                    <rect key="frame" x="5.5" y="1" width="87.5" height="87.5"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="To3-RP-kly" secondAttribute="height" multiplier="1:1" id="wcz-ZM-C7t"/>
+                                    </constraints>
+                                    <state key="normal" title="2">
+                                        <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnTwo:" destination="-1" eventType="touchUpInside" id="3dP-h5-kti"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <constraints>
+                                <constraint firstItem="To3-RP-kly" firstAttribute="centerY" secondItem="cbe-HD-MPn" secondAttribute="centerY" id="9AC-TZ-tYx"/>
+                                <constraint firstAttribute="bottom" secondItem="To3-RP-kly" secondAttribute="bottom" constant="1" id="GPj-rd-kdZ"/>
+                                <constraint firstItem="To3-RP-kly" firstAttribute="centerX" secondItem="cbe-HD-MPn" secondAttribute="centerX" id="daW-C5-c2U"/>
+                                <constraint firstItem="To3-RP-kly" firstAttribute="top" secondItem="cbe-HD-MPn" secondAttribute="top" constant="1" id="hRd-hm-xXK"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ufx-rU-yDQ">
+                            <rect key="frame" x="197" y="269" width="98.5" height="89.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZY-8F-TK9">
+                                    <rect key="frame" x="5.5" y="1" width="87.5" height="87.5"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="wZY-8F-TK9" secondAttribute="height" multiplier="1:1" id="EdQ-6K-7Wf"/>
+                                    </constraints>
+                                    <state key="normal" title="3">
+                                        <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnThree:" destination="-1" eventType="touchUpInside" id="ixt-3Q-ro8"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <constraints>
+                                <constraint firstItem="wZY-8F-TK9" firstAttribute="centerY" secondItem="Ufx-rU-yDQ" secondAttribute="centerY" id="79a-hd-VOQ"/>
+                                <constraint firstItem="wZY-8F-TK9" firstAttribute="centerX" secondItem="Ufx-rU-yDQ" secondAttribute="centerX" id="8QG-5n-kSi"/>
+                                <constraint firstItem="wZY-8F-TK9" firstAttribute="top" secondItem="Ufx-rU-yDQ" secondAttribute="top" constant="1" id="NIg-zm-go9"/>
+                                <constraint firstAttribute="bottom" secondItem="wZY-8F-TK9" secondAttribute="bottom" constant="1" id="m7Q-wE-ZTU"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Nu-cf-2mi">
+                            <rect key="frame" x="295.5" y="269" width="98.5" height="89.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGZ-hA-KtL">
+                                    <rect key="frame" x="5.5" y="1" width="87.5" height="87.5"/>
+                                    <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="IGZ-hA-KtL" secondAttribute="height" multiplier="1:1" id="r1i-cH-BPJ"/>
+                                    </constraints>
+                                    <state key="normal" title="+">
+                                        <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnPlus:" destination="-1" eventType="touchUpInside" id="xnC-2K-srK"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <constraints>
+                                <constraint firstItem="IGZ-hA-KtL" firstAttribute="centerX" secondItem="8Nu-cf-2mi" secondAttribute="centerX" id="Amg-I4-eLd"/>
+                                <constraint firstItem="IGZ-hA-KtL" firstAttribute="centerY" secondItem="8Nu-cf-2mi" secondAttribute="centerY" id="Iwr-8Y-z75"/>
+                                <constraint firstItem="IGZ-hA-KtL" firstAttribute="top" secondItem="8Nu-cf-2mi" secondAttribute="top" constant="1" id="iYH-Vb-KjH"/>
+                                <constraint firstAttribute="bottom" secondItem="IGZ-hA-KtL" secondAttribute="bottom" constant="1" id="yxU-xx-ivw"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SG0-xV-DlU">
+                            <rect key="frame" x="0.0" y="179" width="98.5" height="90"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22f-0m-u86">
+                                    <rect key="frame" x="5.5" y="1" width="87.5" height="88"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="22f-0m-u86" secondAttribute="height" multiplier="1:1" id="xBG-8o-0pa"/>
+                                    </constraints>
+                                    <state key="normal" title="4">
+                                        <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnFour:" destination="-1" eventType="touchUpInside" id="3w1-aV-u7D"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <constraints>
+                                <constraint firstItem="22f-0m-u86" firstAttribute="centerX" secondItem="SG0-xV-DlU" secondAttribute="centerX" id="8Lh-rD-dqy"/>
+                                <constraint firstAttribute="bottom" secondItem="22f-0m-u86" secondAttribute="bottom" constant="1" id="EeE-0L-0Ph"/>
+                                <constraint firstItem="22f-0m-u86" firstAttribute="top" secondItem="SG0-xV-DlU" secondAttribute="top" constant="1" id="O2P-ln-ZTi"/>
+                                <constraint firstItem="22f-0m-u86" firstAttribute="centerY" secondItem="SG0-xV-DlU" secondAttribute="centerY" id="qeu-xf-bAe"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FPK-un-uq4">
+                            <rect key="frame" x="98.5" y="179" width="98.5" height="90"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ZR-nc-f5T">
+                                    <rect key="frame" x="5.5" y="1" width="87.5" height="88"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="5ZR-nc-f5T" secondAttribute="height" multiplier="1:1" id="vpw-cV-zLD"/>
+                                    </constraints>
+                                    <state key="normal" title="5">
+                                        <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnFive:" destination="-1" eventType="touchUpInside" id="Q4D-4Y-HUq"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="5ZR-nc-f5T" secondAttribute="bottom" constant="1" id="1sz-wU-8dC"/>
+                                <constraint firstItem="5ZR-nc-f5T" firstAttribute="centerX" secondItem="FPK-un-uq4" secondAttribute="centerX" id="LpA-eM-IGq"/>
+                                <constraint firstItem="5ZR-nc-f5T" firstAttribute="centerY" secondItem="FPK-un-uq4" secondAttribute="centerY" id="Toq-id-70p"/>
+                                <constraint firstItem="5ZR-nc-f5T" firstAttribute="top" secondItem="FPK-un-uq4" secondAttribute="top" constant="1" id="ixm-hV-BSO"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="icp-rK-zVh">
+                            <rect key="frame" x="197" y="179" width="98.5" height="90"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVY-VW-6s4">
+                                    <rect key="frame" x="5.5" y="1" width="87.5" height="88"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="CVY-VW-6s4" secondAttribute="height" multiplier="1:1" id="xGV-i0-HMO"/>
+                                    </constraints>
+                                    <state key="normal" title="6">
+                                        <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnSix:" destination="-1" eventType="touchUpInside" id="FZF-X4-vFB"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <constraints>
+                                <constraint firstItem="CVY-VW-6s4" firstAttribute="top" secondItem="icp-rK-zVh" secondAttribute="top" constant="1" id="0fX-sR-D2g"/>
+                                <constraint firstAttribute="bottom" secondItem="CVY-VW-6s4" secondAttribute="bottom" constant="1" id="GX8-5e-PHo"/>
+                                <constraint firstItem="CVY-VW-6s4" firstAttribute="centerX" secondItem="icp-rK-zVh" secondAttribute="centerX" id="YDt-yy-3Ur"/>
+                                <constraint firstItem="CVY-VW-6s4" firstAttribute="centerY" secondItem="icp-rK-zVh" secondAttribute="centerY" id="rfu-PA-I47"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6X1-jp-T7H">
+                            <rect key="frame" x="295.5" y="179" width="98.5" height="90"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxN-5a-lTR">
+                                    <rect key="frame" x="5.5" y="1" width="87.5" height="88"/>
+                                    <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="qxN-5a-lTR" secondAttribute="height" multiplier="1:1" id="ZNg-fO-Ki3"/>
+                                    </constraints>
+                                    <state key="normal" title="-">
+                                        <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnMinus:" destination="-1" eventType="touchUpInside" id="Md1-Ii-Vw9"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <constraints>
+                                <constraint firstItem="qxN-5a-lTR" firstAttribute="centerX" secondItem="6X1-jp-T7H" secondAttribute="centerX" id="IuZ-uX-Ave"/>
+                                <constraint firstItem="qxN-5a-lTR" firstAttribute="centerY" secondItem="6X1-jp-T7H" secondAttribute="centerY" id="ZFG-N9-hhu"/>
+                                <constraint firstItem="qxN-5a-lTR" firstAttribute="top" secondItem="6X1-jp-T7H" secondAttribute="top" constant="1" id="vs6-YP-Mfq"/>
+                                <constraint firstAttribute="bottom" secondItem="qxN-5a-lTR" secondAttribute="bottom" constant="1" id="wfG-5u-Emi"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xvi-ib-VIR">
+                            <rect key="frame" x="0.0" y="89.5" width="98.5" height="89.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="092-gO-MdE">
+                                    <rect key="frame" x="5.5" y="1" width="87.5" height="87.5"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="092-gO-MdE" secondAttribute="height" multiplier="1/1" id="Wns-fc-jN6"/>
+                                    </constraints>
+                                    <state key="normal" title="7">
+                                        <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnSeven:" destination="-1" eventType="touchUpInside" id="hFa-zR-TQR"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <constraints>
+                                <constraint firstItem="092-gO-MdE" firstAttribute="centerY" secondItem="xvi-ib-VIR" secondAttribute="centerY" id="2l0-ys-Wbx"/>
+                                <constraint firstItem="092-gO-MdE" firstAttribute="top" secondItem="xvi-ib-VIR" secondAttribute="top" constant="1" id="2rw-mB-vZG"/>
+                                <constraint firstItem="092-gO-MdE" firstAttribute="centerX" secondItem="xvi-ib-VIR" secondAttribute="centerX" id="GZE-d5-YBE"/>
+                                <constraint firstAttribute="bottom" secondItem="092-gO-MdE" secondAttribute="bottom" constant="1" id="Hyx-qd-VeL"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b7V-ON-S0v">
+                            <rect key="frame" x="98.5" y="89.5" width="98.5" height="89.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGA-qd-zEX">
+                                    <rect key="frame" x="5.5" y="1" width="87.5" height="87.5"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="JGA-qd-zEX" secondAttribute="height" multiplier="1:1" id="cJi-x0-kuk"/>
+                                    </constraints>
+                                    <state key="normal" title="8">
+                                        <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnEight:" destination="-1" eventType="touchUpInside" id="cam-f2-DUa"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="JGA-qd-zEX" secondAttribute="bottom" constant="1" id="GX6-Gz-dsR"/>
+                                <constraint firstItem="JGA-qd-zEX" firstAttribute="centerX" secondItem="b7V-ON-S0v" secondAttribute="centerX" id="JBE-td-DTk"/>
+                                <constraint firstItem="JGA-qd-zEX" firstAttribute="centerY" secondItem="b7V-ON-S0v" secondAttribute="centerY" id="iSP-SD-O1I"/>
+                                <constraint firstItem="JGA-qd-zEX" firstAttribute="top" secondItem="b7V-ON-S0v" secondAttribute="top" constant="1" id="pV1-PM-RxM"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ZS-qm-EDX">
+                            <rect key="frame" x="197" y="89.5" width="98.5" height="89.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Va-P5-T6V">
+                                    <rect key="frame" x="5.5" y="1" width="87.5" height="87.5"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="8Va-P5-T6V" secondAttribute="height" multiplier="1:1" id="se6-ye-sZd"/>
+                                    </constraints>
+                                    <state key="normal" title="9">
+                                        <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnNine:" destination="-1" eventType="touchUpInside" id="toM-8U-N24"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <constraints>
+                                <constraint firstItem="8Va-P5-T6V" firstAttribute="top" secondItem="5ZS-qm-EDX" secondAttribute="top" constant="1" id="0kR-AB-55F"/>
+                                <constraint firstAttribute="bottom" secondItem="8Va-P5-T6V" secondAttribute="bottom" constant="1" id="Q89-XV-b2p"/>
+                                <constraint firstItem="8Va-P5-T6V" firstAttribute="centerX" secondItem="5ZS-qm-EDX" secondAttribute="centerX" id="c76-nG-tqC"/>
+                                <constraint firstItem="8Va-P5-T6V" firstAttribute="centerY" secondItem="5ZS-qm-EDX" secondAttribute="centerY" id="fWe-ch-N3S"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n5i-36-KFh">
+                            <rect key="frame" x="295.5" y="89.5" width="98.5" height="89.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kly-Q7-S2A">
+                                    <rect key="frame" x="5.5" y="1" width="87.5" height="87.5"/>
+                                    <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="Kly-Q7-S2A" secondAttribute="height" multiplier="1:1" id="3JP-9v-kyD"/>
+                                    </constraints>
+                                    <state key="normal" title="x">
+                                        <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnMul:" destination="-1" eventType="touchUpInside" id="e3y-TL-Jkl"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="Kly-Q7-S2A" secondAttribute="bottom" constant="1" id="GD8-dS-bPE"/>
+                                <constraint firstItem="Kly-Q7-S2A" firstAttribute="centerX" secondItem="n5i-36-KFh" secondAttribute="centerX" id="XpZ-0O-oU1"/>
+                                <constraint firstItem="Kly-Q7-S2A" firstAttribute="centerY" secondItem="n5i-36-KFh" secondAttribute="centerY" id="izj-Kj-9Du"/>
+                                <constraint firstItem="Kly-Q7-S2A" firstAttribute="top" secondItem="n5i-36-KFh" secondAttribute="top" constant="1" id="k7y-Nf-8h9"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PaK-pZ-B5z">
+                            <rect key="frame" x="0.0" y="0.0" width="98.5" height="89.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MNk-BV-xZj">
+                                    <rect key="frame" x="5.5" y="1" width="87.5" height="87.5"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="MNk-BV-xZj" secondAttribute="height" multiplier="1:1" id="Ctf-rx-za4"/>
+                                    </constraints>
+                                    <state key="normal" title="AC">
+                                        <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnAC:" destination="-1" eventType="touchUpInside" id="b9F-Rf-F7h"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <constraints>
+                                <constraint firstItem="MNk-BV-xZj" firstAttribute="top" secondItem="PaK-pZ-B5z" secondAttribute="top" constant="1" id="GFA-Mz-as4"/>
+                                <constraint firstItem="MNk-BV-xZj" firstAttribute="centerY" secondItem="PaK-pZ-B5z" secondAttribute="centerY" id="bUc-qV-GAz"/>
+                                <constraint firstItem="MNk-BV-xZj" firstAttribute="centerX" secondItem="PaK-pZ-B5z" secondAttribute="centerX" id="bbV-0m-b1S"/>
+                                <constraint firstAttribute="bottom" secondItem="MNk-BV-xZj" secondAttribute="bottom" constant="1" id="x6t-YQ-pnE"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fz5-YZ-Uih">
+                            <rect key="frame" x="98.5" y="0.0" width="98.5" height="89.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwd-pl-Ucd">
+                                    <rect key="frame" x="5.5" y="1" width="87.5" height="87.5"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="jwd-pl-Ucd" secondAttribute="height" multiplier="1:1" id="dPL-tH-quR"/>
+                                    </constraints>
+                                    <state key="normal" title="+/-">
+                                        <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnOppsite:" destination="-1" eventType="touchUpInside" id="7TX-y3-uXN"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <constraints>
+                                <constraint firstItem="jwd-pl-Ucd" firstAttribute="centerX" secondItem="fz5-YZ-Uih" secondAttribute="centerX" id="Bmn-9W-SjK"/>
+                                <constraint firstItem="jwd-pl-Ucd" firstAttribute="centerY" secondItem="fz5-YZ-Uih" secondAttribute="centerY" id="YgU-kg-lba"/>
+                                <constraint firstItem="jwd-pl-Ucd" firstAttribute="top" secondItem="fz5-YZ-Uih" secondAttribute="top" constant="1" id="n5e-JH-YAf"/>
+                                <constraint firstAttribute="bottom" secondItem="jwd-pl-Ucd" secondAttribute="bottom" constant="1" id="vX1-oP-43q"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zpw-nb-aS7">
+                            <rect key="frame" x="197" y="0.0" width="98.5" height="89.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMF-Ay-kx0">
+                                    <rect key="frame" x="5.5" y="1" width="87.5" height="87.5"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="hMF-Ay-kx0" secondAttribute="height" multiplier="1:1" id="kiC-1u-xnj"/>
+                                    </constraints>
+                                    <state key="normal" title="%">
+                                        <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnDivise100:" destination="-1" eventType="touchUpInside" id="xPY-Nc-609"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="hMF-Ay-kx0" secondAttribute="bottom" constant="1" id="5XK-f4-LnQ"/>
+                                <constraint firstItem="hMF-Ay-kx0" firstAttribute="centerY" secondItem="zpw-nb-aS7" secondAttribute="centerY" id="98h-66-rzg"/>
+                                <constraint firstItem="hMF-Ay-kx0" firstAttribute="top" secondItem="zpw-nb-aS7" secondAttribute="top" constant="1" id="fXz-bc-YTu"/>
+                                <constraint firstItem="hMF-Ay-kx0" firstAttribute="centerX" secondItem="zpw-nb-aS7" secondAttribute="centerX" id="rxI-Ad-eyr"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m33-eF-At2">
+                            <rect key="frame" x="295.5" y="0.0" width="98.5" height="89.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZBa-NX-wbl">
+                                    <rect key="frame" x="5.5" y="1" width="87.5" height="87.5"/>
+                                    <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="ZBa-NX-wbl" secondAttribute="height" multiplier="1:1" id="1ZU-nQ-jgg"/>
+                                    </constraints>
+                                    <state key="normal" title="/">
+                                        <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnDivise:" destination="-1" eventType="touchUpInside" id="LLc-ci-prP"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <constraints>
+                                <constraint firstItem="ZBa-NX-wbl" firstAttribute="centerX" secondItem="m33-eF-At2" secondAttribute="centerX" id="1E8-ps-FZd"/>
+                                <constraint firstAttribute="bottom" secondItem="ZBa-NX-wbl" secondAttribute="bottom" constant="1" id="Xem-c5-Piv"/>
+                                <constraint firstItem="ZBa-NX-wbl" firstAttribute="centerY" secondItem="m33-eF-At2" secondAttribute="centerY" id="cMU-ov-dG2"/>
+                                <constraint firstItem="ZBa-NX-wbl" firstAttribute="top" secondItem="m33-eF-At2" secondAttribute="top" constant="1" id="yQT-UD-mxw"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <constraints>
+                        <constraint firstItem="zPp-Kf-rPl" firstAttribute="bottom" secondItem="hQy-0X-D62" secondAttribute="bottom" id="0Fy-K3-O36"/>
+                        <constraint firstItem="B2P-bH-xmJ" firstAttribute="leading" secondItem="eLM-Rk-vut" secondAttribute="leading" id="0aV-DQ-XSz"/>
+                        <constraint firstItem="FPK-un-uq4" firstAttribute="leading" secondItem="SG0-xV-DlU" secondAttribute="trailing" id="0dj-mM-DDj"/>
+                        <constraint firstItem="cbe-HD-MPn" firstAttribute="top" secondItem="FPK-un-uq4" secondAttribute="bottom" id="0jw-v1-rfQ"/>
+                        <constraint firstItem="8Nu-cf-2mi" firstAttribute="leading" secondItem="Ufx-rU-yDQ" secondAttribute="trailing" id="1SH-jF-cbR"/>
+                        <constraint firstItem="PaK-pZ-B5z" firstAttribute="height" secondItem="xvi-ib-VIR" secondAttribute="height" id="1g6-XI-dkN"/>
+                        <constraint firstItem="zPp-Kf-rPl" firstAttribute="leading" secondItem="hQy-0X-D62" secondAttribute="trailing" id="3VX-kw-R1U"/>
+                        <constraint firstItem="icp-rK-zVh" firstAttribute="leading" secondItem="FPK-un-uq4" secondAttribute="trailing" id="4QL-Wr-CLb"/>
+                        <constraint firstItem="5ZS-qm-EDX" firstAttribute="top" secondItem="zpw-nb-aS7" secondAttribute="bottom" id="5Dg-LT-jcl"/>
+                        <constraint firstItem="hQy-0X-D62" firstAttribute="height" secondItem="eLM-Rk-vut" secondAttribute="height" multiplier="1/5" id="5gh-JZ-0eu"/>
+                        <constraint firstItem="b7V-ON-S0v" firstAttribute="height" secondItem="xvi-ib-VIR" secondAttribute="height" id="5lb-7a-hFU"/>
+                        <constraint firstAttribute="trailing" secondItem="eOm-8U-oo7" secondAttribute="trailing" id="7JJ-cY-6GD"/>
+                        <constraint firstItem="eOm-8U-oo7" firstAttribute="height" secondItem="zPp-Kf-rPl" secondAttribute="height" id="8D8-WQ-Scx"/>
+                        <constraint firstItem="cbe-HD-MPn" firstAttribute="leading" secondItem="B2P-bH-xmJ" secondAttribute="trailing" id="8fc-wA-wAU"/>
+                        <constraint firstItem="6X1-jp-T7H" firstAttribute="width" secondItem="icp-rK-zVh" secondAttribute="width" id="9CN-Fs-xRu"/>
+                        <constraint firstItem="B2P-bH-xmJ" firstAttribute="width" secondItem="eLM-Rk-vut" secondAttribute="width" multiplier="1/4" id="9XT-0p-xCb"/>
+                        <constraint firstItem="5ZS-qm-EDX" firstAttribute="height" secondItem="b7V-ON-S0v" secondAttribute="height" id="9u6-gS-Ole"/>
+                        <constraint firstItem="hQy-0X-D62" firstAttribute="leading" secondItem="eLM-Rk-vut" secondAttribute="leading" id="AEG-Za-1cD"/>
+                        <constraint firstItem="Pfe-DJ-17L" firstAttribute="width" secondItem="acD-YO-fn6" secondAttribute="width" id="B3F-EC-Ahb"/>
+                        <constraint firstItem="Fve-O8-Bwz" firstAttribute="height" secondItem="acD-YO-fn6" secondAttribute="height" id="BNO-MP-fxZ"/>
+                        <constraint firstItem="b7V-ON-S0v" firstAttribute="leading" secondItem="xvi-ib-VIR" secondAttribute="trailing" id="CTK-bX-9X8"/>
+                        <constraint firstItem="8Nu-cf-2mi" firstAttribute="top" secondItem="6X1-jp-T7H" secondAttribute="bottom" id="Cgy-ld-XY9"/>
+                        <constraint firstItem="FPK-un-uq4" firstAttribute="height" secondItem="SG0-xV-DlU" secondAttribute="height" id="DVL-Wv-6vb"/>
+                        <constraint firstItem="cbe-HD-MPn" firstAttribute="width" secondItem="B2P-bH-xmJ" secondAttribute="width" id="FCA-m2-PE2"/>
+                        <constraint firstItem="PaK-pZ-B5z" firstAttribute="leading" secondItem="eLM-Rk-vut" secondAttribute="leading" id="GOg-U9-P9u"/>
+                        <constraint firstItem="zPp-Kf-rPl" firstAttribute="top" secondItem="Ufx-rU-yDQ" secondAttribute="bottom" id="H3X-xE-Ukk"/>
+                        <constraint firstItem="cbe-HD-MPn" firstAttribute="height" secondItem="B2P-bH-xmJ" secondAttribute="height" id="HOQ-9a-dpi"/>
+                        <constraint firstItem="5ZS-qm-EDX" firstAttribute="leading" secondItem="b7V-ON-S0v" secondAttribute="trailing" id="IVm-O7-3xd"/>
+                        <constraint firstItem="m33-eF-At2" firstAttribute="leading" secondItem="zpw-nb-aS7" secondAttribute="trailing" id="JBT-Mm-P1r"/>
+                        <constraint firstItem="5ZS-qm-EDX" firstAttribute="width" secondItem="b7V-ON-S0v" secondAttribute="width" id="JVS-d6-Oxz"/>
+                        <constraint firstItem="icp-rK-zVh" firstAttribute="height" secondItem="FPK-un-uq4" secondAttribute="height" id="KMb-bo-mwc"/>
+                        <constraint firstItem="zPp-Kf-rPl" firstAttribute="height" secondItem="hQy-0X-D62" secondAttribute="height" id="Nfu-KC-9BB"/>
+                        <constraint firstItem="Ufx-rU-yDQ" firstAttribute="top" secondItem="icp-rK-zVh" secondAttribute="bottom" id="OOb-qK-cTR"/>
+                        <constraint firstItem="SG0-xV-DlU" firstAttribute="height" secondItem="B2P-bH-xmJ" secondAttribute="height" id="OS1-4E-M5Z"/>
+                        <constraint firstItem="icp-rK-zVh" firstAttribute="width" secondItem="FPK-un-uq4" secondAttribute="width" id="OVn-Fn-oTH"/>
+                        <constraint firstItem="zPp-Kf-rPl" firstAttribute="width" secondItem="eLM-Rk-vut" secondAttribute="width" multiplier="1/4" id="PQd-cG-1zJ"/>
+                        <constraint firstItem="xvi-ib-VIR" firstAttribute="leading" secondItem="eLM-Rk-vut" secondAttribute="leading" id="SJd-L8-aiK"/>
+                        <constraint firstItem="SG0-xV-DlU" firstAttribute="width" secondItem="B2P-bH-xmJ" secondAttribute="width" id="Tbd-vh-0Qr"/>
+                        <constraint firstItem="b7V-ON-S0v" firstAttribute="top" secondItem="fz5-YZ-Uih" secondAttribute="bottom" id="Vmy-N2-2z3"/>
+                        <constraint firstItem="zpw-nb-aS7" firstAttribute="width" secondItem="fz5-YZ-Uih" secondAttribute="width" id="XLD-EO-wvS"/>
+                        <constraint firstItem="B2P-bH-xmJ" firstAttribute="height" secondItem="eLM-Rk-vut" secondAttribute="height" multiplier="1/5" id="Xla-GO-Ins"/>
+                        <constraint firstItem="fz5-YZ-Uih" firstAttribute="width" secondItem="PaK-pZ-B5z" secondAttribute="width" id="Yw7-Tj-1jA"/>
+                        <constraint firstItem="6X1-jp-T7H" firstAttribute="leading" secondItem="icp-rK-zVh" secondAttribute="trailing" id="a2E-lm-bzu"/>
+                        <constraint firstItem="eOm-8U-oo7" firstAttribute="bottom" secondItem="zPp-Kf-rPl" secondAttribute="bottom" id="aME-1Z-66j"/>
+                        <constraint firstItem="FPK-un-uq4" firstAttribute="width" secondItem="SG0-xV-DlU" secondAttribute="width" id="aO8-qW-MAB"/>
+                        <constraint firstItem="icp-rK-zVh" firstAttribute="top" secondItem="5ZS-qm-EDX" secondAttribute="bottom" id="azv-z5-fOH"/>
+                        <constraint firstItem="PaK-pZ-B5z" firstAttribute="width" secondItem="xvi-ib-VIR" secondAttribute="width" id="bMv-l6-2Cj"/>
+                        <constraint firstItem="n5i-36-KFh" firstAttribute="width" secondItem="5ZS-qm-EDX" secondAttribute="width" id="c4K-T3-Tmd"/>
+                        <constraint firstItem="xvi-ib-VIR" firstAttribute="height" secondItem="SG0-xV-DlU" secondAttribute="height" id="c94-0t-9LH"/>
+                        <constraint firstItem="SG0-xV-DlU" firstAttribute="leading" secondItem="eLM-Rk-vut" secondAttribute="leading" id="dps-c5-Ner"/>
+                        <constraint firstItem="Ufx-rU-yDQ" firstAttribute="leading" secondItem="cbe-HD-MPn" secondAttribute="trailing" id="eZK-al-Kc6"/>
+                        <constraint firstItem="n5i-36-KFh" firstAttribute="height" secondItem="5ZS-qm-EDX" secondAttribute="height" id="gag-RN-h0W"/>
+                        <constraint firstItem="hQy-0X-D62" firstAttribute="top" secondItem="B2P-bH-xmJ" secondAttribute="bottom" id="gcD-f6-hcx"/>
+                        <constraint firstItem="Fve-O8-Bwz" firstAttribute="bottom" secondItem="acD-YO-fn6" secondAttribute="bottom" id="grs-Mq-eiu"/>
+                        <constraint firstItem="SG0-xV-DlU" firstAttribute="top" secondItem="xvi-ib-VIR" secondAttribute="bottom" id="gtm-YI-dir"/>
+                        <constraint firstItem="Ufx-rU-yDQ" firstAttribute="height" secondItem="cbe-HD-MPn" secondAttribute="height" id="h1p-SJ-HPJ"/>
+                        <constraint firstItem="hQy-0X-D62" firstAttribute="width" secondItem="eLM-Rk-vut" secondAttribute="width" multiplier="0.5" id="iE9-PT-IyU"/>
+                        <constraint firstAttribute="bottom" secondItem="hQy-0X-D62" secondAttribute="bottom" id="jUK-rk-jhP"/>
+                        <constraint firstItem="8Nu-cf-2mi" firstAttribute="height" secondItem="Ufx-rU-yDQ" secondAttribute="height" id="jgx-f0-Qcy"/>
+                        <constraint firstItem="6X1-jp-T7H" firstAttribute="height" secondItem="icp-rK-zVh" secondAttribute="height" id="jiL-Yz-7SI"/>
+                        <constraint firstItem="zpw-nb-aS7" firstAttribute="leading" secondItem="fz5-YZ-Uih" secondAttribute="trailing" id="jzg-cZ-r4g"/>
+                        <constraint firstItem="6X1-jp-T7H" firstAttribute="top" secondItem="n5i-36-KFh" secondAttribute="bottom" id="m3L-B8-cbS"/>
+                        <constraint firstItem="n5i-36-KFh" firstAttribute="top" secondItem="m33-eF-At2" secondAttribute="bottom" id="m6k-mt-ip9"/>
+                        <constraint firstItem="m33-eF-At2" firstAttribute="height" secondItem="zpw-nb-aS7" secondAttribute="height" id="nJ8-5T-8tn"/>
+                        <constraint firstItem="eOm-8U-oo7" firstAttribute="top" secondItem="8Nu-cf-2mi" secondAttribute="bottom" id="nXL-9j-CWa"/>
+                        <constraint firstItem="hQy-0X-D62" firstAttribute="top" secondItem="cbe-HD-MPn" secondAttribute="bottom" id="nh8-HW-teZ"/>
+                        <constraint firstItem="fz5-YZ-Uih" firstAttribute="leading" secondItem="PaK-pZ-B5z" secondAttribute="trailing" id="odb-ve-Fo3"/>
+                        <constraint firstItem="xvi-ib-VIR" firstAttribute="width" secondItem="SG0-xV-DlU" secondAttribute="width" id="pty-pN-87e"/>
+                        <constraint firstItem="8Nu-cf-2mi" firstAttribute="width" secondItem="Ufx-rU-yDQ" secondAttribute="width" id="qTE-Mr-jIG"/>
+                        <constraint firstItem="FPK-un-uq4" firstAttribute="top" secondItem="b7V-ON-S0v" secondAttribute="bottom" id="qi7-lP-2HO"/>
+                        <constraint firstItem="xvi-ib-VIR" firstAttribute="top" secondItem="PaK-pZ-B5z" secondAttribute="bottom" id="r3x-in-Vnd"/>
+                        <constraint firstItem="zpw-nb-aS7" firstAttribute="height" secondItem="fz5-YZ-Uih" secondAttribute="height" id="rdf-wH-zJz"/>
+                        <constraint firstItem="b7V-ON-S0v" firstAttribute="width" secondItem="xvi-ib-VIR" secondAttribute="width" id="tox-aW-PD9"/>
+                        <constraint firstItem="Ufx-rU-yDQ" firstAttribute="width" secondItem="cbe-HD-MPn" secondAttribute="width" id="uEr-8A-yph"/>
+                        <constraint firstItem="eOm-8U-oo7" firstAttribute="leading" secondItem="zPp-Kf-rPl" secondAttribute="trailing" id="uoD-lc-Nr0"/>
+                        <constraint firstItem="Pfe-DJ-17L" firstAttribute="height" secondItem="acD-YO-fn6" secondAttribute="height" id="vGN-Vn-hGv"/>
+                        <constraint firstItem="m33-eF-At2" firstAttribute="width" secondItem="zpw-nb-aS7" secondAttribute="width" id="vRb-fx-i7D"/>
+                        <constraint firstItem="B2P-bH-xmJ" firstAttribute="top" secondItem="SG0-xV-DlU" secondAttribute="bottom" id="voa-sl-5jG"/>
+                        <constraint firstItem="n5i-36-KFh" firstAttribute="leading" secondItem="5ZS-qm-EDX" secondAttribute="trailing" id="yCD-aU-oiF"/>
+                        <constraint firstItem="fz5-YZ-Uih" firstAttribute="height" secondItem="PaK-pZ-B5z" secondAttribute="height" id="zVj-QC-jLY"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cyx-Sb-FZx">
+                    <rect key="frame" x="10" y="256" width="394" height="128"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JD5-fw-YaF">
+                            <rect key="frame" x="0.0" y="0.0" width="394" height="128"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                            <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="JD5-fw-YaF" secondAttribute="trailing" id="A1i-Ef-J7D"/>
+                        <constraint firstAttribute="bottom" secondItem="JD5-fw-YaF" secondAttribute="bottom" id="AMy-ra-VMK"/>
+                        <constraint firstItem="JD5-fw-YaF" firstAttribute="top" secondItem="Cyx-Sb-FZx" secondAttribute="top" id="vci-zT-z1x"/>
+                        <constraint firstItem="JD5-fw-YaF" firstAttribute="width" secondItem="Cyx-Sb-FZx" secondAttribute="width" id="zIi-un-3fq"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+            <constraints>
+                <constraint firstItem="eLM-Rk-vut" firstAttribute="leading" secondItem="Cyx-Sb-FZx" secondAttribute="leading" id="0Pt-WO-nG1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="eLM-Rk-vut" secondAttribute="bottom" constant="10" id="0ze-j5-T08"/>
+                <constraint firstItem="eLM-Rk-vut" firstAttribute="trailing" secondItem="Cyx-Sb-FZx" secondAttribute="trailing" id="1nZ-mg-Oi3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eLM-Rk-vut" secondAttribute="trailing" constant="10" id="8z6-i9-KnO"/>
+                <constraint firstItem="eLM-Rk-vut" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1/2" id="OLg-3Z-Y90"/>
+                <constraint firstItem="eLM-Rk-vut" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="eAg-dd-KLo"/>
+                <constraint firstItem="Cyx-Sb-FZx" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1/7" id="r9s-n8-aeg"/>
+                <constraint firstItem="eLM-Rk-vut" firstAttribute="top" secondItem="Cyx-Sb-FZx" secondAttribute="bottom" constant="20" id="yHA-9w-Wvs"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="60.869565217391312" y="103.79464285714285"/>
+        </view>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vGe-sP-L9P">
+            <rect key="frame" x="0.0" y="0.0" width="41" height="30"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <point key="canvasLocation" x="-305.07246376811594" y="28.794642857142854"/>
+        </button>
+    </objects>
+</document>
